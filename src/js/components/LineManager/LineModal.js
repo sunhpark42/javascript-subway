@@ -127,13 +127,11 @@ export default class LineModal {
   checkNameDuplicated(event) {
     const name = event.target.value;
 
-    if (this.type === 'edit') {
-      if (name === this.state.name) {
-        this.isLineNameAvailable = true;
-        hide(this.$lineDuplicatedWarning);
+    if (this.type === 'edit' && name === this.state.name) {
+      this.isLineNameAvailable = true;
+      hide(this.$lineDuplicatedWarning);
 
-        return;
-      }
+      return;
     }
 
     if (this.store.lines.find((line) => line.name === name)) {
