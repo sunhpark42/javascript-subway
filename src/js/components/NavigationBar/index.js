@@ -61,8 +61,8 @@ export default class NavigationBar {
     });
   }
 
-  logout(event = '') {
-    event && event.preventDefault();
+  logout(event) {
+    event?.preventDefault();
 
     this.store.updateLoggedIn(false);
     routeTo(getAvailablePath('/login', this.store.isLoggedIn));
