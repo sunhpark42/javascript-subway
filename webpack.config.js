@@ -9,6 +9,7 @@ module.exports = {
     publicPath: '',
     filename: 'subway.bundle.js',
     path: path.resolve(__dirname, './dist'),
+    clean: true,
   },
   module: {
     rules: [
@@ -36,7 +37,7 @@ module.exports = {
   plugins: [
     new webpack.ProgressPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({ filename: 'index.html', template: './index.html' }),
+    new HtmlWebpackPlugin({ template: './index.html' }),
     new CopyWebpackPlugin({
       patterns: [{ from: './public', to: './public' }],
     }),
