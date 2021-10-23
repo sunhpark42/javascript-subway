@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/js/index.js',
@@ -36,5 +37,8 @@ module.exports = {
     new webpack.ProgressPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({ filename: 'index.html', template: './index.html' }),
+    new CopyWebpackPlugin({
+      patterns: [{ from: './public', to: './public' }],
+    }),
   ],
 };
