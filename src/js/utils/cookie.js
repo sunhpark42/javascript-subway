@@ -9,9 +9,9 @@ export const getCookie = (key) => {
   if (!document.cookie) return;
 
   const cookieValue = document.cookie
-    .split('; ')
-    .find((row) => row.startsWith(key + '='))
-    .split('=')[1];
+    ?.split('; ')
+    ?.find((row) => row.startsWith(key + '='))
+    ?.split('=')[1];
 
   return cookieValue;
 };

@@ -1,4 +1,4 @@
-export const HOST = 'https://www.boorownie.com';
+export const HOST = 'https://woowacourse-sever-for-frontend.herokuapp.com/level1/subway';
 
 export const SESSION_EXPIRE_DAYS = 1;
 
